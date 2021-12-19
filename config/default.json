@@ -1,0 +1,4 @@
+{
+	"mongoURI": "mongodb+srv://evolvingadmin:Spr!ng202!@evolving-development.jkdlu.mongodb.net/test",
+	"baseUrl": "http://localhost:5000"
+}
