@@ -1,34 +1,68 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# evolving-urls
 
-## Getting Started
+## Table of Contents
 
-First, run the development server:
+- [About](#about)
+- [Getting Started](#getting_started)
+- [Usage](#usage)
+- [Contributing](../CONTRIBUTING.md)
 
-```bash
-npm run dev
-# or
-yarn dev
+## About <a name = "about"></a>
+
+This is a url shortener for creating branded url's to share on social media.
+
+This project will allow a user to sign in and add url's that they want to share.
+
+As a bonus this application also keeps basic analytics on the url's and will eventually allow you to integrate with an ad platform (Like Facebook) and allow you to create custom audiences from those who click your url.
+
+## Getting Started <a name = "getting_started"></a>
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
+
+### Prerequisites
+
+What things you need to install the software and how to install them.
+
+```
+NodeJS
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installing
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+A step by step series of examples that tell you how to get a development env running.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Say what the step will be
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```
+git clone https://github.com/evolvingsoftware/evolving-urls
+```
 
-## Learn More
+Navigate to directory
 
-To learn more about Next.js, take a look at the following resources:
+```
+cd evolving-urls
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Install Dependencies
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```
+yarn
+```
 
-## Deploy on Vercel
+#### Add Environment Variables
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Add Mongo Connection URI
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```
+mongoURI="mongodb://127.0.0.1/url-shortener"
+```
+Update BaseURL
+```
+baseUrl="shorter.mydomain.com"
+```
+
+End with an example of getting some data out of the system or using it for a little demo.
+
+## Usage <a name = "usage"></a>
+
+Add notes about how to use the system.
