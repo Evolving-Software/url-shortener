@@ -61,14 +61,14 @@ function URLComponent() {
             Branded URL:
             <a
               className="text-blue-500 hover:text-blue-700 hover:inset-2"
-              href={data.shortUrl}
+              href={data?.shortUrl}
             >
-              {data.shortUrl}
+              {data?.shortUrl}
             </a>{' '}
           </p>
-          <p className="text-gray-500">{data.longUrl}</p>
-          <p className="text-gray-500">{data.urlCode}</p>
-          <p className="text-gray-500">{data.date}</p>
+          <p className="text-gray-500">{data?.longUrl}</p>
+          <p className="text-gray-500">{data?.urlCode}</p>
+          <p className="text-gray-500">{data?.date}</p>
         </div>
       </div>
     )

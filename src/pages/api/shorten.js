@@ -13,13 +13,6 @@ export default async function handler(req, res) {
     const baseUrl = process.env.BASE_URL
     console.log(req.body)
     // // Check base url
-    if (!validUrl.isUri(baseUrl)) {
-      res.status(401).json({ message: 'Invalid Base URI' })
-    } else if (!validUrl.isWebUri) {
-      res.status(401).json({ message: 'Invalid Web URI' })
-    } else if (!validUrl.isHttpUri) {
-      res.status(403).json({ message: 'This URI is not secure.' })
-    }
 
     // // create url code
     const urlCode = shortid.generate()
@@ -50,14 +43,19 @@ export default async function handler(req, res) {
           res.end()
         }
       } catch (error) {
-        console.log(error)
         res.status(400).json({
           message: 'Error saving the URL',
           data: error,
         })
       }
+    } else if (!validUrl.isUri(baseUrl)) {
+      res.status(401).json({ message: 'Invalid Base URI' })
+    } else if (!validUrl.isWebUri(longUrl)) {
+      res.status(401).json({ message: 'Invalid Web URI' })
+    } else if (!validUrl.isHttpUri(longUrl)) {
+      res.status(403).json({ message: 'This URI is not secure.' })
     } else {
-      res.status(403).json('Invalid long url')
+      res.status(400).json({ message: 'Invalid URL' })
     }
   }
   //   res.status(200).json({

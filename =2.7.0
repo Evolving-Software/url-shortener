@@ -1,0 +1,132 @@
+Progress: resolved 1, reused 0, downloaded 0, added 0
+Progress: resolved 19, reused 19, downloaded 0, added 0
+Progress: resolved 64, reused 46, downloaded 0, added 0
+Progress: resolved 161, reused 135, downloaded 1, added 0
+Progress: resolved 220, reused 143, downloaded 4, added 0
+Progress: resolved 268, reused 143, downloaded 9, added 0
+Progress: resolved 338, reused 151, downloaded 12, added 0
+Progress: resolved 425, reused 161, downloaded 13, added 0
+Progress: resolved 457, reused 176, downloaded 17, added 0
+Progress: resolved 472, reused 214, downloaded 18, added 0
+Progress: resolved 511, reused 247, downloaded 27, added 0
+ WARN  deprecated querystring@0.2.1: The querystring API is considered Legacy. new code should use the URLSearchParams API instead.
+Progress: resolved 603, reused 430, downloaded 30, added 0
+Progress: resolved 684, reused 591, downloaded 32, added 0
+Progress: resolved 828, reused 765, downloaded 36, added 0
+Progress: resolved 896, reused 820, downloaded 37, added 0
+ WARN  deprecated querystring@0.2.0: The querystring API is considered Legacy. new code should use the URLSearchParams API instead.
+Progress: resolved 962, reused 865, downloaded 41, added 0
+Progress: resolved 1034, reused 950, downloaded 45, added 0
+ WARN  deprecated sane@4.1.0: some dependency vulnerabilities fixed, support for node < 10 dropped, and newer ECMAScript syntax/features added
+Progress: resolved 1129, reused 1014, downloaded 49, added 0
+Progress: resolved 1173, reused 1098, downloaded 51, added 0
+ WARN  deprecated querystring@0.2.1: The querystring API is considered Legacy. new code should use the URLSearchParams API instead.
+ WARN  deprecated source-map-resolve@0.5.3: See https://github.com/lydell/source-map-resolve#deprecated
+ WARN  deprecated chokidar@2.1.8: Chokidar 2 does not receive security updates since 2019. Upgrade to chokidar 3 with 15x fewer dependencies
+Progress: resolved 1265, reused 1193, downloaded 53, added 0
+Progress: resolved 1340, reused 1275, downloaded 56, added 0
+ WARN  deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+ WARN  deprecated fsevents@1.2.13: fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2.
+ WARN  deprecated source-map-url@0.4.1: See https://github.com/lydell/source-map-url#deprecated
+ WARN  deprecated resolve-url@0.2.1: https://github.com/lydell/resolve-url#deprecated
+ WARN  deprecated urix@0.1.0: Please see https://github.com/lydell/urix#deprecated
+Progress: resolved 1470, reused 1388, downloaded 59, added 0
+Progress: resolved 1556, reused 1489, downloaded 60, added 0
+Packages: +1557
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Progress: resolved 1557, reused 1489, downloaded 61, added 0
+Packages are hard linked from the content-addressable store to the virtual store.
+  Content-addressable store is at: C:\Users\riley\.pnpm-store\v3
+  Virtual store is at:             node_modules/.pnpm
+Progress: resolved 1557, reused 1490, downloaded 62, added 27
+Progress: resolved 1557, reused 1490, downloaded 62, added 88
+Progress: resolved 1557, reused 1490, downloaded 62, added 109
+Progress: resolved 1557, reused 1490, downloaded 62, added 113
+Progress: resolved 1557, reused 1490, downloaded 62, added 171
+Progress: resolved 1557, reused 1490, downloaded 62, added 172
+Progress: resolved 1557, reused 1490, downloaded 62, added 183
+Progress: resolved 1557, reused 1490, downloaded 62, added 280
+Progress: resolved 1557, reused 1490, downloaded 62, added 412
+Progress: resolved 1557, reused 1490, downloaded 62, added 474
+Progress: resolved 1557, reused 1490, downloaded 62, added 614
+Progress: resolved 1557, reused 1490, downloaded 62, added 723
+Progress: resolved 1557, reused 1490, downloaded 62, added 840
+Progress: resolved 1557, reused 1490, downloaded 62, added 841
+Progress: resolved 1557, reused 1490, downloaded 62, added 901
+Progress: resolved 1557, reused 1490, downloaded 62, added 941
+Progress: resolved 1557, reused 1490, downloaded 62, added 1049
+Progress: resolved 1557, reused 1490, downloaded 62, added 1170
+Progress: resolved 1557, reused 1490, downloaded 62, added 1217
+Progress: resolved 1557, reused 1490, downloaded 62, added 1275
+Progress: resolved 1557, reused 1490, downloaded 62, added 1325
+Progress: resolved 1557, reused 1490, downloaded 62, added 1355
+Progress: resolved 1557, reused 1490, downloaded 62, added 1419
+Progress: resolved 1557, reused 1490, downloaded 62, added 1491
+Progress: resolved 1557, reused 1490, downloaded 62, added 1557, done
+.../node_modules/core-js-pure postinstall$ node -e "try{require('./postinstall')}catch(e){}"
+.../core-js@3.21.1/node_modules/core-js postinstall$ node -e "try{require('./postinstall')}catch(e){}"
+.../node_modules/core-js-pure postinstall: Thank you for using core-js ( https://github.com/zloirock/core-js ) for polyfilling JavaScript standard library!
+.../node_modules/core-js-pure postinstall: The project needs your help! Please consider supporting of core-js:
+.../node_modules/core-js-pure postinstall: > https://opencollective.com/core-js 
+.../node_modules/core-js-pure postinstall: > https://patreon.com/zloirock 
+.../node_modules/core-js-pure postinstall: > https://paypal.me/zloirock 
+.../node_modules/core-js-pure postinstall: > bitcoin: bc1qlea7544qtsmj2rayg0lthvza9fau63ux0fstcz 
+.../node_modules/core-js-pure postinstall: Also, the author of core-js ( https://github.com/zloirock ) is looking for a good job -)
+.../node_modules/core-js-pure postinstall: Done
+.../core-js@3.21.1/node_modules/core-js postinstall: Done
+
+dependencies:
++ config 3.3.7
++ cors 2.8.5
++ jest 27.5.1
++ mocha 9.2.1
++ mongoose 6.2.3
++ next 11.1.4 (12.1.0 is available)
++ react 17.0.0 (17.0.2 is available)
++ react-dom 17.0.0 (17.0.2 is available)
++ shortid 2.2.16
++ typescript 4.5.5
++ valid-url 1.0.9
+
+devDependencies:
++ @babel/core 7.17.5
++ @storybook/addon-actions 6.4.19
++ @storybook/addon-essentials 6.4.19
++ @storybook/addon-interactions 6.4.19
++ @storybook/addon-links 6.4.19
++ @storybook/react 6.4.19
++ @storybook/testing-library 0.0.9
++ autoprefixer 10.4.2
++ babel-loader 8.2.3
++ eslint 8.5.0 (8.9.0 is available)
++ eslint-config-next 12.0.7 (12.1.0 is available)
++ eslint-plugin-storybook 0.5.7
++ postcss 8.4.7
++ tailwindcss 3.0.23
+
+ WARN  Issues with peer dependencies found
+.
+├─┬ @storybook/addon-essentials
+│ ├── ✕ missing peer webpack@"*"
+│ └─┬ @storybook/addon-docs
+│   ├── ✕ missing peer webpack@"*"
+│   ├─┬ @storybook/core
+│   │ ├── ✕ missing peer webpack@"*"
+│   │ └─┬ @storybook/core-client
+│   │   └── ✕ missing peer webpack@"*"
+│   └─┬ react-element-to-jsx-string
+│     ├── ✕ unmet peer react@"^0.14.8 || ^15.0.1 || ^16.0.0 || ^17.0.1": found 17.0.0
+│     └── ✕ unmet peer react-dom@"^0.14.8 || ^15.0.1 || ^16.0.0 || ^17.0.1": found 17.0.0
+├─┬ babel-loader
+│ └── ✕ missing peer webpack@>=2
+└─┬ next
+  ├── ✕ unmet peer react@^17.0.2: found 17.0.0
+  ├── ✕ unmet peer react-dom@^17.0.2: found 17.0.0
+  ├─┬ @next/react-refresh-utils
+  │ └── ✕ missing peer webpack@"^4 || ^5"
+  └─┬ @next/react-dev-overlay
+    ├── ✕ unmet peer react@^17.0.2: found 17.0.0
+    └── ✕ unmet peer react-dom@^17.0.2: found 17.0.0
+Peer dependencies that should be installed:
+  webpack@">=4.0.0 <5.0.0 || >=5.0.0 <6.0.0"
+
