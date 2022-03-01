@@ -20,6 +20,7 @@ specifiers:
   '@storybook/client-api': ^6.0.0
   '@storybook/manager-webpack5': ^6.4.19
   '@storybook/node-logger': ^6.4.19
+  '@storybook/preset-scss': ^1.0.3
   '@storybook/react': ^6.4.19
   '@storybook/testing-library': 0.0.9
   '@tailwindcss/postcss7-compat': ^2.2.17
@@ -37,6 +38,7 @@ specifiers:
   babel-loader: ^8.2.3
   config: ^3.3.7
   cors: ^2.8.5
+  css-loader: ^6.6.0
   eslint: 8.5.0
   eslint-config-next: 12.0.7
   eslint-plugin-storybook: ^0.5.7
@@ -49,9 +51,13 @@ specifiers:
   postcss-loader: ^4.3.0
   react: 17.0.2
   react-dom: ^17.0.2
+  sass: ^1.49.9
+  sass-loader: ^12.6.0
   shortid: ^2.2.16
   storybook: ^6.4.19
   storybook-addon-next-router: 3.1.1
+  storybook-addon-sass-postcss: ^0.1.0
+  style-loader: ^3.3.1
   tailwindcss: ^2.2.19
   typescript: ^4.5.5
   valid-url: ^1.0.9
@@ -69,7 +75,7 @@ dependencies:
   jest: 27.5.1
   mocha: 9.2.1
   mongoose: 6.2.3
-  next: 12.1.0_33bdac975a6e334c49640fab91e2abb4
+  next: 12.1.0_b8b2418670651b634ff05a91b7cd94fe
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
   shortid: 2.2.16
@@ -88,6 +94,7 @@ devDependencies:
   '@storybook/builder-webpack5': 6.4.19_aa2e78321a567cf8da59b43aa8b04b5a
   '@storybook/manager-webpack5': 6.4.19_aa2e78321a567cf8da59b43aa8b04b5a
   '@storybook/node-logger': 6.4.19
+  '@storybook/preset-scss': 1.0.3_74564d0862e9a8cfb506e1ee9b2263e2
   '@storybook/react': 6.4.19_16e45f060cc04f5e23c08c36a6c0ff0e
   '@storybook/testing-library': 0.0.9_react-dom@17.0.2+react@17.0.2
   '@testing-library/dom': 7.31.2
@@ -102,14 +109,19 @@ devDependencies:
   babel-core: 7.0.0-bridge.0_@babel+core@7.17.5
   babel-jest: 26.6.3_@babel+core@7.17.5
   babel-loader: 8.2.3_9351ded4f79a023849d74b5df047d562
+  css-loader: 6.6.0_webpack@5.69.1
   eslint: 8.5.0
   eslint-config-next: 12.0.7_3d36ca0ffe87b3598c5280132884af4f
   eslint-plugin-storybook: 0.5.7_eslint@8.5.0+typescript@4.5.5
   postcss: 8.4.7
   postcss-cli: 8.3.1_postcss@8.4.7
   postcss-loader: 4.3.0_postcss@8.4.7+webpack@5.69.1
+  sass: 1.49.9
+  sass-loader: 12.6.0_sass@1.49.9+webpack@5.69.1
   storybook: 6.4.19_6e5535b857e8b523f4cc650e11900da0
   storybook-addon-next-router: 3.1.1_9a8016499d762bf5b0c840f3045e2d78
+  storybook-addon-sass-postcss: 0.1.0_webpack@5.69.1
+  style-loader: 3.3.1_webpack@5.69.1
   tailwindcss: 2.2.19_4585f94de3eac54c17be782e8b51352c
 
 packages:
@@ -3444,6 +3456,18 @@ packages:
       core-js: 3.21.1
     dev: true
 
+  /@storybook/preset-scss/1.0.3_74564d0862e9a8cfb506e1ee9b2263e2:
+    resolution: {integrity: sha512-o9Iz6wxPeNENrQa2mKlsDKynBfqU2uWaRP80HeWp4TkGgf7/x3DVF2O7yi9N0x/PI1qzzTTpxlQ90D62XmpiTw==}
+    peerDependencies:
+      css-loader: '*'
+      sass-loader: '*'
+      style-loader: '*'
+    dependencies:
+      css-loader: 6.6.0_webpack@5.69.1
+      sass-loader: 12.6.0_sass@1.49.9+webpack@5.69.1
+      style-loader: 3.3.1_webpack@5.69.1
+    dev: true
+
   /@storybook/preview-web/6.4.19_react-dom@17.0.2+react@17.0.2:
     resolution: {integrity: sha512-jqltoBv5j7lvnxEfV9w8dLX9ASWGuvgz97yg8Yo5FqkftEwrHJenyvMGcTgDJKJPorF+wiz/9aIqnmd3LCAcZQ==}
     peerDependencies:
@@ -5729,6 +5753,23 @@ packages:
       webpack: 5.69.1
     dev: true
 
+  /css-loader/6.6.0_webpack@5.69.1:
+    resolution: {integrity: sha512-FK7H2lisOixPT406s5gZM1S3l8GrfhEBT3ZiL2UX1Ng1XWs0y2GPllz/OTyvbaHe12VgQrIXIzuEGVlbUhodqg==}
+    engines: {node: '>= 12.13.0'}
+    peerDependencies:
+      webpack: ^5.0.0
+    dependencies:
+      icss-utils: 5.1.0_postcss@8.4.7
+      postcss: 8.4.7
+      postcss-modules-extract-imports: 3.0.0_postcss@8.4.7
+      postcss-modules-local-by-default: 4.0.0_postcss@8.4.7
+      postcss-modules-scope: 3.0.0_postcss@8.4.7
+      postcss-modules-values: 4.0.0_postcss@8.4.7
+      postcss-value-parser: 4.2.0
+      semver: 7.3.5
+      webpack: 5.69.1
+    dev: true
+
   /css-select/4.2.1:
     resolution: {integrity: sha512-/aUslKhzkTNCQUB2qTX84lVmfia9NyjP3WpDGtj/WxhwBzWBYUV3DgUpurHTme8UTPcPlAD1DJ+b0nN/t50zDQ==}
     dependencies:
@@ -6325,7 +6366,7 @@ packages:
       eslint-plugin-jsx-a11y: 6.5.1_eslint@8.5.0
       eslint-plugin-react: 7.29.2_eslint@8.5.0
       eslint-plugin-react-hooks: 4.3.0_eslint@8.5.0
-      next: 12.1.0_33bdac975a6e334c49640fab91e2abb4
+      next: 12.1.0_b8b2418670651b634ff05a91b7cd94fe
       typescript: 4.5.5
     transitivePeerDependencies:
       - supports-color
@@ -7662,6 +7703,10 @@ packages:
   /ignore/5.2.0:
     resolution: {integrity: sha512-CmxgYGiEPCLhfLnpPp1MoRmifwEIOgjcHXxOBjv7mY96c+eWScsOP9c112ZyLdWHi0FxHjI+4uVhKYp/gcdRmQ==}
     engines: {node: '>= 4'}
+    dev: true
+
+  /immutable/4.0.0:
+    resolution: {integrity: sha512-zIE9hX70qew5qTUjSS7wi1iwj/l7+m54KWU247nhM3v806UdGj1yDndXj+IOYxxtW9zyLI+xqFNZjTuDaLUqFw==}
     dev: true
 
   /import-fresh/3.3.0:
@@ -9543,7 +9588,7 @@ packages:
     resolution: {integrity: sha512-AO81vsIO1k1sM4Zrd6Hu7regmJN1NSiAja10gc4bX3F0wd+9rQmcuHQaHVQCYIEC8iFXnE+mavh23GOt7wBgug==}
     dev: true
 
-  /next/12.1.0_33bdac975a6e334c49640fab91e2abb4:
+  /next/12.1.0_b8b2418670651b634ff05a91b7cd94fe:
     resolution: {integrity: sha512-s885kWvnIlxsUFHq9UGyIyLiuD0G3BUC/xrH0CEnH5lHEWkwQcHOORgbDF0hbrW9vr/7am4ETfX4A7M6DjrE7Q==}
     engines: {node: '>=12.22.0'}
     hasBin: true
@@ -9566,6 +9611,7 @@ packages:
       postcss: 8.4.5
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
+      sass: 1.49.9
       styled-jsx: 5.0.0_@babel+core@7.17.5+react@17.0.2
       use-subscription: 1.5.1_react@17.0.2
     optionalDependencies:
@@ -11272,6 +11318,66 @@ packages:
     dev: false
     optional: true
 
+  /sass-loader/10.2.1_sass@1.49.9+webpack@5.69.1:
+    resolution: {integrity: sha512-RRvWl+3K2LSMezIsd008ErK4rk6CulIMSwrcc2aZvjymUgKo/vjXGp1rSWmfTUX7bblEOz8tst4wBwWtCGBqKA==}
+    engines: {node: '>= 10.13.0'}
+    peerDependencies:
+      fibers: '>= 3.1.0'
+      node-sass: ^4.0.0 || ^5.0.0 || ^6.0.0
+      sass: ^1.3.0
+      webpack: ^4.36.0 || ^5.0.0
+    peerDependenciesMeta:
+      fibers:
+        optional: true
+      node-sass:
+        optional: true
+      sass:
+        optional: true
+    dependencies:
+      klona: 2.0.5
+      loader-utils: 2.0.2
+      neo-async: 2.6.2
+      sass: 1.49.9
+      schema-utils: 3.1.1
+      semver: 7.3.5
+      webpack: 5.69.1
+    dev: true
+
+  /sass-loader/12.6.0_sass@1.49.9+webpack@5.69.1:
+    resolution: {integrity: sha512-oLTaH0YCtX4cfnJZxKSLAyglED0naiYfNG1iXfU5w1LNZ+ukoA5DtyDIN5zmKVZwYNJP4KRc5Y3hkWga+7tYfA==}
+    engines: {node: '>= 12.13.0'}
+    peerDependencies:
+      fibers: '>= 3.1.0'
+      node-sass: ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0
+      sass: ^1.3.0
+      sass-embedded: '*'
+      webpack: ^5.0.0
+    peerDependenciesMeta:
+      fibers:
+        optional: true
+      node-sass:
+        optional: true
+      sass:
+        optional: true
+      sass-embedded:
+        optional: true
+    dependencies:
+      klona: 2.0.5
+      neo-async: 2.6.2
+      sass: 1.49.9
+      webpack: 5.69.1
+    dev: true
+
+  /sass/1.49.9:
+    resolution: {integrity: sha512-YlYWkkHP9fbwaFRZQRXgDi3mXZShslVmmo+FVK3kHLUELHHEYrCmL1x6IUjC7wLS6VuJSAFXRQS/DxdsC4xL1A==}
+    engines: {node: '>=12.0.0'}
+    hasBin: true
+    dependencies:
+      chokidar: 3.5.3
+      immutable: 4.0.0
+      source-map-js: 1.0.2
+    dev: true
+
   /saxes/5.0.1:
     resolution: {integrity: sha512-5LBh1Tls8c9xgGjw3QrMwETmTMVk0oFgvrFSvWx62llR2hcEInrKNZ2GZCCuuy2lvWrdl5jhbpeqc5hRYKFOcw==}
     engines: {node: '>=10'}
@@ -11678,10 +11784,27 @@ packages:
       '@storybook/addon-actions': 6.4.19_b8fdba992ce7d797017dc07106486496
       '@storybook/addons': 6.4.19_react-dom@17.0.2+react@17.0.2
       '@storybook/client-api': 6.4.19_react-dom@17.0.2+react@17.0.2
-      next: 12.1.0_33bdac975a6e334c49640fab91e2abb4
+      next: 12.1.0_b8b2418670651b634ff05a91b7cd94fe
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
       tslib: 2.3.1
+    dev: true
+
+  /storybook-addon-sass-postcss/0.1.0_webpack@5.69.1:
+    resolution: {integrity: sha512-YCP8jpnA7bLPktW9M/utgcfOjhPGiMCrv61aK74+aEZz6lsA7R5DgoZcEPWD7g9Dx5GFCzxgZ/OSHUNdXXT/bw==}
+    engines: {node: '>=10', yarn: ^1.17.0}
+    dependencies:
+      '@storybook/node-logger': 6.4.19
+      css-loader: 3.6.0_webpack@5.69.1
+      postcss: 7.0.39
+      postcss-loader: 4.3.0_postcss@7.0.39+webpack@5.69.1
+      sass: 1.49.9
+      sass-loader: 10.2.1_sass@1.49.9+webpack@5.69.1
+      style-loader: 1.3.0_webpack@5.69.1
+    transitivePeerDependencies:
+      - fibers
+      - node-sass
+      - webpack
     dev: true
 
   /storybook/6.4.19_6e5535b857e8b523f4cc650e11900da0:
@@ -11842,6 +11965,15 @@ packages:
     dependencies:
       loader-utils: 2.0.2
       schema-utils: 3.1.1
+      webpack: 5.69.1
+    dev: true
+
+  /style-loader/3.3.1_webpack@5.69.1:
+    resolution: {integrity: sha512-GPcQ+LDJbrcxHORTRes6Jy2sfvK2kS6hpSfI/fXhPt+spVzxF6LJ1dHLN9zIGmVaaP044YKaIatFaufENRiDoQ==}
+    engines: {node: '>= 12.13.0'}
+    peerDependencies:
+      webpack: ^5.0.0
+    dependencies:
       webpack: 5.69.1
     dev: true
 

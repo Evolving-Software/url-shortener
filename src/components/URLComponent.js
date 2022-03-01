@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react'
+import URLInput from './elements/input/URLInput'
 // A Component that displays the error message for five seconds
 // and then clears it.
 
@@ -98,6 +99,7 @@ function URLComponent() {
           {ErrorMessage(error)}
         </div>
       </form>
+      <URLInput />
        {data && <DisplayData data={data} />}
     </div>
   )

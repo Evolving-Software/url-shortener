@@ -1,0 +1,72 @@
+.URLInput {
+    /* Form Fields/Text input with inset label */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 9px 13px;
+
+    position: static;
+    width: 320px;
+    height: 38px;
+    left: 340px;
+    top: 216px;
+
+    /* Gradient2 */
+    background: linear-gradient(128.64deg, #fe6f61 19%, #ffcaca 89.26%);
+    /* shadow/sm */
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 20px 0px;
+
+    /* Input */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+
+    position: static;
+    width: 294px;
+    height: 20px;
+    left: 13px;
+    top: 9px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 0px 0px;
+
+    /* Placeholder */
+
+    position: static;
+    width: 294px;
+    height: 20px;
+    left: 0px;
+    top: 0px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 20px;
+    /* identical to box height, or 111% */
+
+    /* White */
+    color: #ffffff;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+    margin: 0px 0px;
+}
