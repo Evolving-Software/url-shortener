@@ -5,7 +5,7 @@ import URLInput from './URLInput';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Example/URLInput',
+  title: 'Elements/URLInput',
   component: URLInput,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
@@ -21,6 +21,10 @@ export const Primary = Template.bind({});
 Primary.args = {
   primary: true,
   label: 'URLInput',
+  value: 'https://example.com',
+  name: 'url',
+  onChange: (value) => console.log(value),
+  error: 'This is an error'
 };
 
 // export const Secondary = Template.bind({});
