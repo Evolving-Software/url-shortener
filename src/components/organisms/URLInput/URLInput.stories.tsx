@@ -16,12 +16,12 @@ export default {
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template: ComponentStory<typeof URLInput> = (args) => <URLInput {...args} />;
 
-export const Primary = Template.bind({});
+export const PrimaryURl = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
-Primary.args = {
+PrimaryURl.args = {
   primary: true,
-  label: 'URLInput',
-  value: 'https://example.com',
+  label: 'Enter a URL',
+  placeholder: 'https://example.com',
   name: 'url',
   onChange: (value) => console.log(value),
   error: 'This is an error'

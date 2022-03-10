@@ -40,7 +40,8 @@ const URLInput = ({ placeholder, className, label, name, onBlur, onFocus, ...pro
   return (
     <TextInput
       name={name}
-
+      label={label}
+      type="email"
       // On input change check if the value is a valid URL with the isValidURL function clear the error on the input
       onChange={(e) => {
         setValue(e.target.value);
