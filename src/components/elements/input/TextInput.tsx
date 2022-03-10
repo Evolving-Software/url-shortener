@@ -6,20 +6,21 @@ interface InputProps {
   onChange: (e: any) => void;
   onSubmit?: (value: string) => void;
   onCancel?: () => void;
-  placeholder?: string;
-  label?: string;
+  placeholder: string;
+  label: string;
   error?: string;
   className?: string;
   onBlur?: () => void;
   onFocus?: () => void;
   name?: string;
+  type: string;
 }
 
 
 
 
 
-const Input: React.FC<InputProps> = ({ placeholder, className, label, name, onBlur, onFocus, onChange, ...props }) => {
+const Input: React.FC<InputProps> = ({ placeholder, className, label, name, onBlur, onFocus, onChange, type, ...props }) => {
   const [value, setValue] = useState<string | null>(null);;
 
   return (
@@ -28,7 +29,7 @@ const Input: React.FC<InputProps> = ({ placeholder, className, label, name, onBl
         {label}
       </label>
       <input
-        type="url"
+        type={type}
         name={name}
         id={name}
         // On input change check if the value is a valid URL with the isValidURL function clear the error on the input
