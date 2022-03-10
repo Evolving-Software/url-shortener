@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react'
-import URLInput from './elements/input/URLInput'
+import URLInput from './elements/input/TextInput'
 // A Component that displays the error message for five seconds
 // and then clears it.
 
-function URLComponent() {
+function URLForm() {
   // Create a state variable to hold the URL
   const [url, setUrl] = useState('')
   // Create a state variable to hold the error message
@@ -105,4 +105,4 @@ function URLComponent() {
   )
 }
 
-export default URLComponent
+export default URLForm

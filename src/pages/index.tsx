@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import URLComponent from '../components/URLComponent'
+import URLForm from '../components/URLForm'
 
 export default function Home() {
   return (
@@ -7,13 +7,13 @@ export default function Home() {
       <Head>
         <title>Evolving URLs</title>
         <meta name="description" content="A url shortener" />
-        
+
       </Head>
 
-    <h1 className="text-4xl" >Evolving URLs</h1>
+      <h1 className="text-4xl" >Evolving URLs</h1>
 
-      
-    <URLComponent />
+
+      <URLForm />
 
     </div>
   )
